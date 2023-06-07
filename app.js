@@ -243,20 +243,20 @@
 // Arrow function
 // const name =()=>{}
 
-const logger = (a, b, c) => {
-  const total = a + b + c;
-  return total;
-};
-console.log(logger(4,5,7));
-// we could arrow function for 1 line return eg
+// const logger = (a, b, c) => {
+//   const total = a + b + c;
+//   return total;
+// };
+// console.log(logger(4,5,7));
+// // we could arrow function for 1 line return eg
 
-const diff = (a, b) => a - b;
-console.log(diff(67, 50));
+// const diff = (a, b) => a - b;
+// console.log(diff(67, 50));
 
-const calcAvg = (a, b, c) => {
-  constavg = (a + b + c) / 3;
-  return Number(avg.tofixed(2))
-};
+// const calcAvg = (a, b, c) => {
+//   constavg = (a + b + c) / 3;
+//   return Number(avg.tofixed(2))
+// };
 
 
 // variable scoping is where var accessing from we have 2 types - global and local var
@@ -267,91 +267,207 @@ const calcAvg = (a, b, c) => {
 // includes,sort,pop,push,shift,unshift,slice,splice,concat,join,tostring
 // fliter,find map,foreach
 
-const student = ["mofe", "precious", "sheu", "bola"];
-console.log(student);
-console.log(student.length);
-console.log(student[0]);
-console.log(student.length - 1);
+// const student = ["mofe", "precious", "sheu", "bola"];
+// console.log(student);
+// console.log(student.length);
+// console.log(student[0]);
+// console.log(student.length - 1);
 
 
 
-const countries = ["nigeria", "ghana", "usa", "uk"];
-console.log(countries.length);
-countries.length > 5 ? console.log("the countries is more than 5"):
-console.log("its less than 5");
+// const countries = ["nigeria", "ghana", "usa", "uk"];
+// console.log(countries.length);
+// countries.length > 5 ? console.log("the countries is more than 5"):
+// console.log("its less than 5");
 
 
-let savings = 100000
-const transaction = [5000, -10000, -100]
+// let savings = 100000
+// const transaction = [5000, -10000, -100]
 
-transaction.push(-2000);
-transaction.push(5000);
-transaction.push(-3000);
-transaction.pop();
-console.log(transaction);
-let debit = 0;
-let credit = 0;
+// transaction.push(-2000);
+// transaction.push(5000);
+// transaction.push(-3000);
+// transaction.pop();
+// console.log(transaction);
+// let debit = 0;
+// let credit = 0;
 
-for (i = 0; i < transaction.length; i++) {
-  console.log(transaction[i]);
-  savings += transaction[i]
-  if (transaction[i] < 0) {
-    debit += transaction[i];
-    console.log(`you have been debited ${transaction[i]}`);
+// for (i = 0; i < transaction.length; i++) {
+//   console.log(transaction[i]);
+//   savings += transaction[i]
+//   if (transaction[i] < 0) {
+//     debit += transaction[i];
+//     console.log(`you have been debited ${transaction[i]}`);
     
-  } else {
-     credit += transaction[i];
-    console.log(`you have been credited ${transaction[i]}`);
-  }
+//   } else {
+//      credit += transaction[i];
+//     console.log(`you have been credited ${transaction[i]}`);
+//   }
+// }
+// console.log(`The total debit is ${debit}`);
+// console.log(`The total crebit is ${credit}`);
+// console.log(`your account balance is ${savings}`);
+
+
+
+
+
+// const friends= ["john","jane","Adam","Jennifer","owen"]
+// friends.forEach( (friend) => {
+// console.log(`The name of my friend is ${friend}`);
+// });
+// friends.forEach((friend, index) => {
+//   console.log(`${index} the name of my friend is ${friend}`);
+// });
+
+
+
+// friends.forEach((f, index) => {
+//   console.log(f, index);
+// })
+
+// // map
+
+// friends.map((val, index) => {
+//   console.log(index);
+//   if (val === "jane" || val === "Adam") {
+//     console.log(`${val} is my best friend`);
+//   } else {
+//     console.log(`${val} is just my friend`);
+//   }
+// })
+
+// // filter find
+
+// const filteredfriends = friends.filter((friend) => {
+//   return friend.startsWith("j");
+// });
+// console.log(filteredfriends);
+
+// // find
+// const foundUser = friends.find((friend) => {
+//   return friend.startsWith("j")
+// })
+// console.log(foundUser);
+
+
+// const result = friends.filter((friend) => friend.length > 3);
+// const result2 = friends.find((f) => f.startsWith("j"));
+
+// console.log(result, result2);
+
+const movement = [300, -50, 700, 400, -300];
+const total = movement.reduce((acc, val) => {
+  return acc + val;
+}, 0);
+
+console.log(`your total bill is ${total}`);
+
+
+// object 
+const user = {
+  firstName: "Toyin",
+  lastName: "olu",
+  age: "30",
+  job: "Web developer",
+  friends: ["tolu","bolu","ayo"]
+  
 }
-console.log(`The total debit is ${debit}`);
-console.log(`The total crebit is ${credit}`);
-console.log(`your account balance is ${savings}`);
+console.log(user);
+
+//  access properties fron an object
+// dot notation, bracket
+
+console.log(user.age);
+console.log(user.firstName.toUpperCase);
+
+// Object
+console.log(user["age"]);
+console.log(user["friends"]);
 
 
+// adding properties to an Object
+user.hasACar = true;
+user.status = "married";
+console.log(user);
 
+// delete 
+delete user.friends;
+console.log(user);
 
+// obj methods are function working on an object
+const book = {
+  title: "Rich dad poor Dad",
+  author: "Robert Kiyosaki",
+  year: 2001,
+  page: 207,
+  simiarBooks: [
+    "Richest man in Babylon",
+    "The Monk who sold his Ferrari",
+    "think and Grow Rich",
+  ],
+  publisher: "Macmillan",
+  getSummary: function () {
+    return `the title of the book is ${this.title} written by ${this.author} in the ${this.year}`
+  },
+};
 
-const friends= ["john","jane","Adam","Jennifer","owen"]
-friends.forEach( (friend) => {
-console.log(`The name of my friend is ${friend}`);  
+// Object destructuring ability to pick up more that one properties at a time in Object eg
+
+const {publisher, author, page, year, } = book
+console.log(publisher);
+console.log(page, year);
+
+const users = [
+  { name: 'Jane', userName: 'jane@23', password: '234534', age: 50 },
+  { name: 'kamu', userName: 'manedd23', password: '234534', age: 16 },
+  { name: 'kerryy', userName: 'jane3453', password: '234534', age: 69 },
+]
+
+// age>=18
+const canView = users.filter((user) => {
+  return user.age >= 18;
 });
-friends.forEach((friend, index) => {
-  console.log(`${index} the name of my friend is ${friend}`);
+console.log(canView);
+
+const search = users.filter((user) => {
+  return user.name.includes("j") || user.userName.includes("j")
 });
+console.log(search);
 
 
 
-friends.forEach((f, index) => {
-  console.log(f, index);
-})
+// rest and spread
+// rest ...
+const ages = [32, 54, 16, 65, 89];
+const newAge = [2, ...ages, 76, 80]
+console.log(newAge);
 
-// map
 
-friends.map((val, index) => {
-  console.log(index);
-  if (val === "jane" || val === "Adam") {
-    console.log(`${val} is my best friend`);
-  } else {
-    console.log(`${val} is just my friend`);
+// math object
+// sqrt, trunc, round, random, ceil, floor,
+
+console.log(Math.sqrt(399));
+console.log(Math.trunc(59.467));
+console.log(Math.round(54.889));
+console.log(Math.random() * 6 + 1);
+
+const computer = ['rock', 'paper', 'scissors'];
+const randomNum = Math.trunc(Math.random() * 3);
+const randomChoice = computer[randomNum];
+const playerChoice = 'rock';
+console.log(randomChoice);
+
+const checkWin = function (computer, playerChoice) {
+  if (computer === playerChoice) {
+    return 'this is a tie'
+  } else if (playerChoice === 'rock') {
+    if (computer === "scissors") {
+      return 'Rock smash scissors, You win!';
+    } else {
+      return 'paper covers rock, You lose!';
+    } 
+    
   }
-})
-
-// filter find
-
-const filteredfriends = friends.filter((friend) => {
-  return friend.startsWith("j");
-});
-console.log(filteredfriends);
-
-// find
-const foundUser = friends.find((friend) => {
-  return friend.startsWith("j")
-})
-console.log(foundUser);
-
-
-const result = friends.filter((friend) => friend.length > 3);
-const result2 = friends.find((f) => f.startsWith("j"));
-
-console.log(result,result2);
+  
+}
