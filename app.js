@@ -356,118 +356,221 @@
 
 // console.log(result, result2);
 
-const movement = [300, -50, 700, 400, -300];
-const total = movement.reduce((acc, val) => {
-  return acc + val;
-}, 0);
+// const movement = [300, -50, 700, 400, -300];
+// const total = movement.reduce((acc, val) => {
+//   return acc + val;
+// }, 0);
 
-console.log(`your total bill is ${total}`);
+// console.log(`your total bill is ${total}`);
 
 
-// object 
-const user = {
-  firstName: "Toyin",
-  lastName: "olu",
-  age: "30",
-  job: "Web developer",
-  friends: ["tolu","bolu","ayo"]
+// // object
+// const user = {
+//   firstName: "Toyin",
+//   lastName: "olu",
+//   age: "30",
+//   job: "Web developer",
+//   friends: ["tolu","bolu","ayo"]
   
-}
-console.log(user);
+// }
+// console.log(user);
 
-//  access properties fron an object
-// dot notation, bracket
+// //  access properties fron an object
+// // dot notation, bracket
 
-console.log(user.age);
-console.log(user.firstName.toUpperCase);
+// console.log(user.age);
+// console.log(user.firstName.toUpperCase);
 
-// Object
-console.log(user["age"]);
-console.log(user["friends"]);
-
-
-// adding properties to an Object
-user.hasACar = true;
-user.status = "married";
-console.log(user);
-
-// delete 
-delete user.friends;
-console.log(user);
-
-// obj methods are function working on an object
-const book = {
-  title: "Rich dad poor Dad",
-  author: "Robert Kiyosaki",
-  year: 2001,
-  page: 207,
-  simiarBooks: [
-    "Richest man in Babylon",
-    "The Monk who sold his Ferrari",
-    "think and Grow Rich",
-  ],
-  publisher: "Macmillan",
-  getSummary: function () {
-    return `the title of the book is ${this.title} written by ${this.author} in the ${this.year}`
-  },
-};
-
-// Object destructuring ability to pick up more that one properties at a time in Object eg
-
-const {publisher, author, page, year, } = book
-console.log(publisher);
-console.log(page, year);
-
-const users = [
-  { name: 'Jane', userName: 'jane@23', password: '234534', age: 50 },
-  { name: 'kamu', userName: 'manedd23', password: '234534', age: 16 },
-  { name: 'kerryy', userName: 'jane3453', password: '234534', age: 69 },
-]
-
-// age>=18
-const canView = users.filter((user) => {
-  return user.age >= 18;
-});
-console.log(canView);
-
-const search = users.filter((user) => {
-  return user.name.includes("j") || user.userName.includes("j")
-});
-console.log(search);
+// // Object
+// console.log(user["age"]);
+// console.log(user["friends"]);
 
 
+// // adding properties to an Object
+// user.hasACar = true;
+// user.status = "married";
+// console.log(user);
 
-// rest and spread
-// rest ...
-const ages = [32, 54, 16, 65, 89];
-const newAge = [2, ...ages, 76, 80]
-console.log(newAge);
+// // delete
+// delete user.friends;
+// console.log(user);
+
+// // obj methods are function working on an object
+// const book = {
+//   title: "Rich dad poor Dad",
+//   author: "Robert Kiyosaki",
+//   year: 2001,
+//   page: 207,
+//   simiarBooks: [
+//     "Richest man in Babylon",
+//     "The Monk who sold his Ferrari",
+//     "think and Grow Rich",
+//   ],
+//   publisher: "Macmillan",
+//   getSummary: function () {
+//     return `the title of the book is ${this.title} written by ${this.author} in the ${this.year}`
+//   },
+// };
+
+// // Object destructuring ability to pick up more that one properties at a time in Object eg
+
+// const {publisher, author, page, year, } = book
+// console.log(publisher);
+// console.log(page, year);
+
+// const users = [
+//   { name: 'Jane', userName: 'jane@23', password: '234534', age: 50 },
+//   { name: 'kamu', userName: 'manedd23', password: '234534', age: 16 },
+//   { name: 'kerryy', userName: 'jane3453', password: '234534', age: 69 },
+// ]
+
+// // age>=18
+// const canView = users.filter((user) => {
+//   return user.age >= 18;
+// });
+// console.log(canView);
+
+// const search = users.filter((user) => {
+//   return user.name.includes("j") || user.userName.includes("j")
+// });
+// console.log(search);
+
+
+
+// // rest and spread
+// // rest ...
+// const ages = [32, 54, 16, 65, 89];
+// const newAge = [2, ...ages, 76, 80]
+// console.log(newAge);
 
 
 // math object
 // sqrt, trunc, round, random, ceil, floor,
 
-console.log(Math.sqrt(399));
-console.log(Math.trunc(59.467));
-console.log(Math.round(54.889));
-console.log(Math.random() * 6 + 1);
+// console.log(Math.sqrt(399));
+// console.log(Math.trunc(59.467));
+// console.log(Math.round(54.889));
+// console.log(Math.random() * 6 + 1);
 
-const computer = ['rock', 'paper', 'scissors'];
-const randomNum = Math.trunc(Math.random() * 3);
-const randomChoice = computer[randomNum];
-const playerChoice = 'rock';
-console.log(randomChoice);
+// const computer = ['rock', 'paper', 'scissors'];
+// const randomNum = Math.trunc(Math.random() * 3);
+// const randomChoice = computer[randomNum];
+// const playerChoice = 'rock';
+// console.log(randomChoice);
 
-const checkWin = function (computer, playerChoice) {
-  if (computer === playerChoice) {
-    return 'this is a tie'
-  } else if (playerChoice === 'rock') {
-    if (computer === "scissors") {
-      return 'Rock smash scissors, You win!';
-    } else {
-      return 'paper covers rock, You lose!';
-    } 
+// const checkWin = function (computer, playerChoice) {
+//   if (computer === playerChoice) {
+//     return 'this is a tie'
+//   } else if (playerChoice === 'rock') {
+//     if (computer === "scissors") {
+//       return 'Rock smash scissors, You win!';
+//     } else {
+//       return 'paper covers rock, You lose!';
+//     }
     
-  }
+//   }
   
-}
+// }
+// const checkwin = function(computer, player){
+//     if (computer === player) {
+//         return 'This is a tie'
+//     }else if (player === 'rock'){
+//         if (computer ==='scissors'){
+//             return 'Rock smashes scissors, You win!'
+//         }else {
+//             return 'Paper covers rock, You lose!'
+//     }
+//     }else if (player ==='papper'){
+//         if (computer === 'rock'){
+//             return 'paper covers rock, You win!'
+//         }else{
+//             return 'scissors cut paper, You lose!'
+//         }
+//     } else if (player ==='scissors'){
+//         if (computer === 'paper'){
+//             return 'scissors cut paper, You win'
+//         }else {
+//             return 'Rock smashes scissors, You lose!'
+//         }
+//     }
+
+
+//  }
+//  const result = checkwin(computerchoice, playerchioce)
+// console.log(result);
+
+
+
+// synchronouslog , asychronous js 
+console.log(1);
+// takeing time log(take time)
+console.log(2);
+
+// for (i=0; i < 10000; i++)
+
+
+console.log('first');
+setTimeout(() => {
+  console.log('second');
+}, 15000);
+
+const myinterval = setInterval(() => {
+  console.log('i am the interval');
+  
+}, 2000);
+console.log('third');
+
+clearInterval(myinterval);
+
+setTimeout(() => {
+  clearInterval(myinterval);
+}, 15000);
+
+// fetching data- APIs- application programming interface
+// json - javascript object notation
+// data array
+
+// promise
+
+
+
+const url = "https://jsonplaceholder.typicode.com/users";
+// // fetch
+ fetch(url).then((Response) => {
+  return Response.json();
+ })
+  .then((users) => {
+   console.log(users);
+  });
+
+const fetchData = (site) => {
+  fetch(site)
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+fetchData(url);
+fetchData("https://jsonplaceholder.typicode.com/posts");
+
+// try and catch block
+
+
+// aysnc await
+
+
+const getData = async (site) => {
+  try {
+    const Response = await fetch(site);
+    const data = await Response.json();
+    console.log(date);
+  } catch (error) {
+    console.log(error);
+  }
+};
+getData(url);
+
+// storage api
+// local storage - setitem, getitem, removeitem, clear, lenght
